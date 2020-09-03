@@ -737,9 +737,14 @@ test("App fetchs data and renders appropriately", async () => {
    "Chapter Eight: The Upside Down"
   ]
 
-  for( let i=0 ; i < 8 ; i++ ){
-     console.log( "TITLE ARRAY ", titleArray[i] );
-     expect( getByText( titleArray[i] ) ).toBeInTheDocument 
-  }
+  titleArray.forEach( (title) => {
+     //console.log("For Each : ", title )
+     expect( getByText( title ) ).toBeInTheDocument 
+  })
+
+  //   for( let i=0 ; i < 8 ; i++ ){
+  //      console.log( "TITLE ARRAY ", titleArray[i] );
+  //      expect( getByText( titleArray[i] ) ).toBeInTheDocument 
+  //   }
 
 });
