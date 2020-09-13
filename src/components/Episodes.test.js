@@ -79,7 +79,7 @@ test("Render episodes correctly", () => {
   queryAllByText(/season/i).toBeNull;
   queryAllByText(/minutes/i).toBeNull;
 
-  // RENDER WITH TEST DATA
+  // RENDER WITH TEST JSON DATA IN THIS FILE
   const { getAllByText } = render(<Episodes episodes={episodes} />);
 
   expect(getAllByText(/season/i)).toHaveLength(3);

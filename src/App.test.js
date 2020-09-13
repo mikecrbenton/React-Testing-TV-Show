@@ -716,15 +716,14 @@ test("App fetchs data and renders appropriately", async () => {
 
   expect( queryAllByText(/episode/i) ).toHaveLength(0);
 
-  
-
+  // CLICK ON THE SELECT SEASON DROPDOWN
   fireEvent.mouseDown( getByText(/select a season/i) );
-   expect( getAllByText(/season/i) ).toHaveLength(5); 
-   expect( getByText(/season 3/i) ).toBeInTheDocument(); 
+    expect( getAllByText(/season/i) ).toHaveLength(5); 
+    expect( getByText(/season 3/i) ).toBeInTheDocument(); 
 
   fireEvent.mouseDown( getByText(/season 1/i) );
-   //console.log( getByText(/season 1/i)) 
-   expect( getAllByText(/episode/i) ).toHaveLength(8);
+    //console.log( getByText(/season 1/i)) 
+    expect( getAllByText(/episode/i) ).toHaveLength(8);
 
   const titleArray = [
    "Chapter One: The Vanishing of Will Byers",
